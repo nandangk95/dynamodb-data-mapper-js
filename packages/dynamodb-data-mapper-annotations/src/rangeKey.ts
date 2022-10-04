@@ -6,7 +6,7 @@ import {
     DateType,
     NumberType,
     StringType,
-} from '@aws/dynamodb-data-marshaller';
+} from '@aws-ndk/dynamodb-data-marshaller';
 
 export function rangeKey(
     parameters: Partial<BinaryType|CustomType<any>|DateType|NumberType|StringType> = {}

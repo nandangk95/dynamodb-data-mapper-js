@@ -1,5 +1,5 @@
 {
-  "name": "@aws/dynamodb-expressions",
+  "name": "@aws-ndk/dynamodb-expressions",
   "version": "0.7.3",
   "description": "Composable expression objects for Amazon DynamoDB",
   "keywords": [
@@ -8,10 +8,10 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/awslabs/dynamodb-data-mapper-js.git"
+    "url": "git+https://github.com/nandangk95/dynamodb-data-mapper-js.git"
   },
   "bugs": {
-    "url": "https://github.com/awslabs/dynamodb-data-mapper-js/issues"
+    "url": "https://github.com/nandangk95/dynamodb-data-mapper-js/issues"
   },
   "homepage": "https://awslabs.github.io/dynamodb-data-mapper-js/packages/dynamodb-expressions/",
   "main": "./build/index.js",
@@ -30,16 +30,16 @@
   "devDependencies": {
     "@types/jest": "^24",
     "@types/node": "^8.0.4",
-    "aws-sdk": "^2.7.0",
+    "@aws-sdk/client-dynamodb": "^3.178.0",
     "jest": "^24",
     "typedoc": "^0.14.0",
     "typescript": "^3.4"
   },
   "peerDependencies": {
-    "aws-sdk": "^2.7.0"
+    "@aws-sdk/client-dynamodb": "^3.178.0"
   },
   "dependencies": {
-    "@aws/dynamodb-auto-marshaller": "^0.7.1",
+    "@aws-ndk/dynamodb-auto-marshaller": "^0.7.1",
     "tslib": "^1.9"
   }
 }

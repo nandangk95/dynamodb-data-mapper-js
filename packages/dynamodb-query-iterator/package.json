@@ -1,5 +1,5 @@
 {
-  "name": "@aws/dynamodb-query-iterator",
+  "name": "@aws-ndk/dynamodb-query-iterator",
   "version": "0.7.1",
   "description": "Abstraction for DynamoDB queries and scans that handles pagination and parallel worker coordination",
   "keywords": [
@@ -30,13 +30,13 @@
   "devDependencies": {
     "@types/jest": "^24",
     "@types/node": "^8.0.4",
-    "aws-sdk": "^2.7.0",
+    "@aws-sdk/client-dynamodb": "^3.178.0",
     "jest": "^24",
     "typedoc": "^0.14.0",
     "typescript": "^3.4"
   },
   "peerDependencies": {
-    "aws-sdk": "^2.7.0"
+    "@aws-sdk/client-dynamodb": "^3.178.0"
   },
   "dependencies": {
     "tslib": "^1.9"

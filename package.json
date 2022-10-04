@@ -3,6 +3,7 @@
   "private": true,
   "scripts": {
     "bootstrap": "lerna bootstrap",
+    "build": "lerna run build",
     "docs": "typedoc src && lerna run docs",
     "pretest": "lerna run pretest",
     "test": "jest"
@@ -21,7 +22,7 @@
     "typescript": "^3.4"
   },
   "dependencies": {
-    "aws-sdk": "^2.7.0"
+    "@aws-sdk/client-dynamodb": "^3.178.0"
   },
   "workspaces": [
     "packages/*"
