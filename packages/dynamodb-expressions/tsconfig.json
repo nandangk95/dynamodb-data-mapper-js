@@ -1,12 +1,14 @@
 {
   "compilerOptions": {
-    "target": "es5",
+    "target": "es6",
     "lib": [
+      "DOM",
       "es5",
       "es2015.iterable",
       "es2015.promise",
       "es2015.collection",
-      "es2015.symbol.wellknown"
+      "es2015.symbol.wellknown",
+      "esnext.asynciterable"
     ],
     "downlevelIteration": true,
     "importHelpers": true,
@@ -15,7 +17,8 @@
     "declaration": true,
     "sourceMap": true,
     "rootDir": "./src",
-    "outDir": "./build"
+    "outDir": "./build",
+    "noImplicitAny": false
   },
   "typedocOptions": {
     "mode": "file",

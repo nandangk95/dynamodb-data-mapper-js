@@ -28,12 +28,12 @@
   },
   "license": "Apache-2.0",
   "devDependencies": {
-    "@types/jest": "^24",
-    "@types/node": "^8.0.4",
+    "@types/jest": "^26.0.22",
+    "@types/node": "^14",
     "@aws-sdk/client-dynamodb": "^3.178.0",
     "jest": "^24",
     "typedoc": "^0.14.0",
-    "typescript": "^3.4"
+    "typescript": "^4.2"
   },
   "dependencies": {
     "@aws-ndk/dynamodb-auto-marshaller": "^0.7.1",

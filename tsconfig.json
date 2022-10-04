@@ -1,12 +1,18 @@
 {
   "compilerOptions": {
-    "target": "es5",
+    "moduleResolution": "node",
+    "target": "ES6",
     "lib": [
-      "dom",
-      "es5"
+      "DOM",
+      "ES6"
     ],
-    "module": "commonjs",
-    "strict": true
+    "module": "ES2020",
+    "skipLibCheck": true,
+    "strictNullChecks": true,
+    "allowSyntheticDefaultImports": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "esModuleInterop": true,
   },
   "typedocOptions": {
     "mode": "file",
