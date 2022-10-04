@@ -1,6 +1,6 @@
 {
   "name": "@ndkur/dynamodb-expressions",
-  "version": "0.7.6",
+  "version": "0.7.8",
   "description": "Composable expression objects for Amazon DynamoDB",
   "keywords": [
     "aws",
@@ -39,7 +39,7 @@
     "@aws-sdk/client-dynamodb": "^3.178.0"
   },
   "dependencies": {
-    "@ndkur/dynamodb-auto-marshaller": "^0.7.6",
+    "@ndkur/dynamodb-auto-marshaller": "^0.7.8",
     "tslib": "^1.9"
   },
   "gitHead": "4e22857e35866657c664750b7547efd79e207549"
