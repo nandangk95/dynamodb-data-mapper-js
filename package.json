@@ -6,7 +6,8 @@
     "build": "lerna run build",
     "docs": "typedoc src && lerna run docs",
     "pretest": "lerna run pretest",
-    "test": "jest"
+    "test": "jest",
+    "publish-ci": "lerna publish from-git --yes --no-verify-access"
   },
   "author": {
     "name": "AWS SDK for JavaScript Team",
