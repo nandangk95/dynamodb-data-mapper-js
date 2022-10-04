@@ -1,4 +1,4 @@
-import {Schema} from '@ndkur/dynamodb-data-marshaller';
+import {Schema} from '@nandangk95/dynamodb-data-marshaller';
 
 /**
  * Table metadata is reported by items submitted to the data mapper via methods

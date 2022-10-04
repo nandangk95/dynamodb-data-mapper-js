@@ -4,7 +4,7 @@ import {
     AttributeValue,
     AttributeValue as AttributeValueModel,
 } from '@aws-sdk/client-dynamodb';
-import {Marshaller} from "@ndkur/dynamodb-auto-marshaller";
+import {Marshaller} from "@nandangk95/dynamodb-auto-marshaller";
 
 /**
  * An object that manages expression attribute name and value substitution.

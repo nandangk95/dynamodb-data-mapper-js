@@ -1,6 +1,6 @@
 import {PropertyAnnotation} from './annotationShapes';
 import {attribute} from './attribute';
-import {NumberType} from '@ndkur/dynamodb-data-marshaller';
+import {NumberType} from '@nandangk95/dynamodb-data-marshaller';
 
 export function versionAttribute(
     parameters: Partial<NumberType> = {}

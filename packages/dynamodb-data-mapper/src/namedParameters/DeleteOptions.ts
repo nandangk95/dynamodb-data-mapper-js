@@ -1,5 +1,5 @@
 import { StringToAnyObjectMap } from '../constants';
-import { ConditionExpression } from '@ndkur/dynamodb-expressions';
+import { ConditionExpression } from '@nandangk95/dynamodb-expressions';
 
 export interface DeleteOptions {
     /**

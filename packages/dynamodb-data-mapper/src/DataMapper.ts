@@ -42,7 +42,7 @@ import {
     PerTableOptions,
     TableOptions,
     WriteRequest,
-} from '@ndkur/dynamodb-batch-iterator';
+} from '@nandangk95/dynamodb-batch-iterator';
 import {
     AttributeTypeMap,
     getSchemaName,
@@ -60,7 +60,7 @@ import {
     toSchemaName,
     unmarshallItem,
     ZeroArgumentsConstructor,
-} from '@ndkur/dynamodb-data-marshaller';
+} from '@nandangk95/dynamodb-data-marshaller';
 import {
     AttributePath,
     AttributeValue as AttributeValueClass,
@@ -72,7 +72,7 @@ import {
     PathElement,
     serializeProjectionExpression,
     UpdateExpression,
-} from '@ndkur/dynamodb-expressions';
+} from '@nandangk95/dynamodb-expressions';
 import {
     AttributeDefinition, AttributeValue,
     CreateGlobalSecondaryIndexAction,

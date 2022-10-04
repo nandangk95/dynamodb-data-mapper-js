@@ -6,7 +6,7 @@ import {
     DateType,
     NumberType,
     StringType,
-} from '@ndkur/dynamodb-data-marshaller';
+} from '@nandangk95/dynamodb-data-marshaller';
 
 export function hashKey(
     parameters: Partial<BinaryType|CustomType<any>|DateType|NumberType|StringType> = {}

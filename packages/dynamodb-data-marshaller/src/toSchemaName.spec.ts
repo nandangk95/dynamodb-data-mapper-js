@@ -1,6 +1,6 @@
 import {Schema} from './Schema';
 import {toSchemaName} from './toSchemaName';
-import {AttributePath} from '@ndkur/dynamodb-expressions';
+import {AttributePath} from '@nandangk95/dynamodb-expressions';
 
 const testCases = new Map<string, string>();
 const schema: Schema = {

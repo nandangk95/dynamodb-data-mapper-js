@@ -11,13 +11,13 @@ import {
     ParallelScanPaginator as BasePaginator,
     ParallelScanState as BaseParallelScanState,
     ScanState as BaseScanState,
-} from '@ndkur/dynamodb-query-iterator';
+} from '@nandangk95/dynamodb-query-iterator';
 import {
     marshallKey,
     Schema,
     unmarshallItem,
     ZeroArgumentsConstructor,
-} from '@ndkur/dynamodb-data-marshaller';
+} from '@nandangk95/dynamodb-data-marshaller';
 import { DynamoDB } from "@aws-sdk/client-dynamodb";
 
 /**

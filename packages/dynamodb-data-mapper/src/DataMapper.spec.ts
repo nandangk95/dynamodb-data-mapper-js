@@ -3,7 +3,7 @@ import {
     DynamoDbSchema,
     DynamoDbTable,
 } from "./protocols";
-import {Schema} from "@ndkur/dynamodb-data-marshaller";
+import {Schema} from "@nandangk95/dynamodb-data-marshaller";
 import {
     AttributePath,
     between,
@@ -11,7 +11,7 @@ import {
     FunctionExpression,
     inList,
     UpdateExpression,
-} from "@ndkur/dynamodb-expressions";
+} from "@nandangk95/dynamodb-expressions";
 import {ItemNotFoundException} from "./ItemNotFoundException";
 import {BatchGetOptions, ParallelScanState, GlobalSecondaryIndexOptions} from './index';
 import {

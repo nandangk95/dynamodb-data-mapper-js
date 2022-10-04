@@ -4,7 +4,7 @@ import {
     BinarySet,
     NumberValue,
     NumberValueSet,
-} from "@ndkur/dynamodb-auto-marshaller";
+} from "@nandangk95/dynamodb-auto-marshaller";
 
 describe('unmarshallItem', () => {
     it('should unmarshall fields from their attributeName if provided', () => {

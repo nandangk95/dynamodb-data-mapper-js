@@ -8,7 +8,7 @@ import {
     BinaryValue,
     Marshaller,
     NumberValueSet,
-} from '@ndkur/dynamodb-auto-marshaller';
+} from '@nandangk95/dynamodb-auto-marshaller';
 
 const convertToBytes = (str): any[] => {
     var bytes: any[] = [];

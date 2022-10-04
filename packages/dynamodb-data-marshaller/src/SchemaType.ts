@@ -1,6 +1,6 @@
 import { ScalarAttributeType } from './KeySchema';
 import { Schema } from './Schema';
-import { BinaryValue, MarshallingOptions } from "@ndkur/dynamodb-auto-marshaller";
+import { BinaryValue, MarshallingOptions } from "@nandangk95/dynamodb-auto-marshaller";
 import { AttributeValue } from '@aws-sdk/client-dynamodb';
 
 /**

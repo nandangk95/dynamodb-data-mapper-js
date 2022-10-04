@@ -5,7 +5,7 @@ import {
     table,
     versionAttribute,
 } from "./";
-import { embed } from '@ndkur/dynamodb-data-mapper';
+import { embed } from '@nandangk95/dynamodb-data-mapper';
 
 export class Author {
     @attribute()

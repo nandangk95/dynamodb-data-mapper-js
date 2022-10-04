@@ -1,4 +1,4 @@
-import { marshallValue, Schema } from '@ndkur/dynamodb-data-marshaller';
+import { marshallValue, Schema } from '@nandangk95/dynamodb-data-marshaller';
 import {AttributeValue} from "@aws-sdk/client-dynamodb";
 
 /**

@@ -1,10 +1,10 @@
 import { getSchema } from './protocols';
-import { DynamoDbPaginatorInterface } from '@ndkur/dynamodb-query-iterator';
+import { DynamoDbPaginatorInterface } from '@nandangk95/dynamodb-query-iterator';
 import {
     Schema,
     unmarshallItem,
     ZeroArgumentsConstructor,
-} from '@ndkur/dynamodb-data-marshaller';
+} from '@nandangk95/dynamodb-data-marshaller';
 import { ConsumedCapacity } from '@aws-sdk/client-dynamodb';
 
 if (Symbol && !Symbol.asyncIterator) {

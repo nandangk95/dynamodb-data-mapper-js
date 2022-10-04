@@ -1,4 +1,4 @@
-import { AttributePath } from '@ndkur/dynamodb-expressions';
+import { AttributePath } from '@nandangk95/dynamodb-expressions';
 import { Schema } from './Schema';
 import { SchemaType } from './SchemaType';
 
