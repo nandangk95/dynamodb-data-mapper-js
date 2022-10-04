@@ -7,6 +7,7 @@
     "pretest": "lerna run pretest",
     "test": "jest",
     "bump-patch": "lerna version patch --yes",
+    "publish-exist": "lerna publish from-package",
     "publish-ci": "lerna publish from-git --yes --no-verify-access"
   },
   "author": {
@@ -28,10 +29,19 @@
     "@aws-sdk/client-dynamodb": "^3.178.0"
   },
   "workspaces": [
-    "packages/*"
+    "packages/dynamodb-auto-marshaller",
+    "packages/dynamodb-batch-iterator",
+    "packages/dynamodb-data-mapper",
+    "packages/dynamodb-data-mapper-annotations",
+    "packages/dynamodb-data-marshaller",
+    "packages/dynamodb-expressions",
+    "packages/dynamodb-query-iterator"
   ],
   "jest": {
     "testEnvironment": "node",
-    "testPathIgnorePatterns": ["/node_modules/", ".ts"]
+    "testPathIgnorePatterns": [
+      "/node_modules/",
+      ".ts"
+    ]
   }
 }
