@@ -1,6 +1,6 @@
 {
   "name": "@ndkur/dynamodb-data-mapper",
-  "version": "0.7.5",
+  "version": "0.7.6",
   "description": "A schema-based data mapper for Amazon DynamoDB",
   "keywords": [
     "aws",
@@ -38,11 +38,11 @@
     "typescript": "^4.2"
   },
   "dependencies": {
-    "@ndkur/dynamodb-auto-marshaller": "^0.7.5",
-    "@ndkur/dynamodb-batch-iterator": "^0.7.4",
-    "@ndkur/dynamodb-data-marshaller": "^0.7.5",
-    "@ndkur/dynamodb-expressions": "^0.7.5",
-    "@ndkur/dynamodb-query-iterator": "^0.7.4",
+    "@ndkur/dynamodb-auto-marshaller": "^0.7.6",
+    "@ndkur/dynamodb-batch-iterator": "^0.7.6",
+    "@ndkur/dynamodb-data-marshaller": "^0.7.6",
+    "@ndkur/dynamodb-expressions": "^0.7.6",
+    "@ndkur/dynamodb-query-iterator": "^0.7.6",
     "tslib": "^1.9"
   },
   "peerDependencies": {
