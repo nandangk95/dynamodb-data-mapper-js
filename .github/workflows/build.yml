@@ -27,7 +27,7 @@ jobs:
           registry-url: https://registry.npmjs.org
           scope: '@aws-ndk'
       - run: npm install -g npm@latest
-      - run: npm ci
+      - run: npm install
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
       - run: npm run bootstrap
@@ -54,7 +54,7 @@ jobs:
           registry-url: https://registry.npmjs.org
           scope: '@aws-ndk'
       - run: npm install -g npm@latest
-      - run: npm ci
+      - run: npm install
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
       - run: npm run bootstrap
