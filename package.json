@@ -7,6 +7,7 @@
     "docs": "typedoc src && lerna run docs",
     "pretest": "lerna run pretest",
     "test": "jest",
+    "bump-patch": "lerna version patch --yes",
     "publish-ci": "lerna publish from-git --yes --no-verify-access"
   },
   "author": {
