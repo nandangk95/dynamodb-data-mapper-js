@@ -1,5 +1,5 @@
 import { StringToAnyObjectMap } from '../constants';
-import { ConditionExpression } from '@aws-ndk/dynamodb-expressions';
+import { ConditionExpression } from '@ndkur/dynamodb-expressions';
 
 export interface PutOptions {
     /**

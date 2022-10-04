@@ -1,6 +1,6 @@
 import { Author, Comment, Post } from './exampleSchema.fixture';
-import { DataMapper, DynamoDbSchema } from '@aws-ndk/dynamodb-data-mapper';
-import { isSchema } from '@aws-ndk/dynamodb-data-marshaller';
+import { DataMapper, DynamoDbSchema } from '@ndkur/dynamodb-data-mapper';
+import { isSchema } from '@ndkur/dynamodb-data-marshaller';
 
 jest.mock('uuid', () => ({v4: jest.fn(() => 'uuid')}));
 

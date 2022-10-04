@@ -1,4 +1,4 @@
-import { AttributePath } from '@aws-ndk/dynamodb-expressions';
+import { AttributePath } from '@ndkur/dynamodb-expressions';
 import { Schema } from './Schema';
 import { SchemaType } from './SchemaType';
 

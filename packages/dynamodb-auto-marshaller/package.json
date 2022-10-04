@@ -1,5 +1,5 @@
 {
-  "name": "@aws-ndk/dynamodb-auto-marshaller",
+  "name": "@ndkur/dynamodb-auto-marshaller",
   "version": "0.7.5",
   "description": "A data marshaller that converts JavaScript types into Amazon DynamoDB AttributeValues",
   "keywords": [
@@ -40,5 +40,6 @@
   },
   "dependencies": {
     "tslib": "^1.9"
-  }
+  },
+  "gitHead": "4e22857e35866657c664750b7547efd79e207549"
 }

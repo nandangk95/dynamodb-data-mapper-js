@@ -1,4 +1,4 @@
-import {ZeroArgumentsConstructor} from '@aws-ndk/dynamodb-data-marshaller';
+import {ZeroArgumentsConstructor} from '@ndkur/dynamodb-data-marshaller';
 
 export interface ClassAnnotation {
     (target: ZeroArgumentsConstructor<any>): void;

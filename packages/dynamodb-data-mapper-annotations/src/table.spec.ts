@@ -1,5 +1,5 @@
 import {table} from "./table";
-import {DynamoDbTable} from '@aws-ndk/dynamodb-data-mapper';
+import {DynamoDbTable} from '@ndkur/dynamodb-data-mapper';
 
 describe('table', () => {
     it(

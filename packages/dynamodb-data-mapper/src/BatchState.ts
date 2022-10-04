@@ -1,4 +1,4 @@
-import {Schema, ZeroArgumentsConstructor} from '@aws-ndk/dynamodb-data-marshaller';
+import {Schema, ZeroArgumentsConstructor} from '@ndkur/dynamodb-data-marshaller';
 
 export interface BatchState<T> {
     [tableName: string]: {

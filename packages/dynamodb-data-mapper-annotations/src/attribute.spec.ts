@@ -1,8 +1,8 @@
 import {attribute} from './attribute';
 import {METADATA_TYPE_KEY} from './constants';
-import {BinarySet, NumberValueSet} from "@aws-ndk/dynamodb-auto-marshaller";
-import {DynamoDbSchema} from '@aws-ndk/dynamodb-data-mapper';
-import {isSchema, SchemaType} from '@aws-ndk/dynamodb-data-marshaller';
+import {BinarySet, NumberValueSet} from "@ndkur/dynamodb-auto-marshaller";
+import {DynamoDbSchema} from '@ndkur/dynamodb-data-mapper';
+import {isSchema, SchemaType} from '@ndkur/dynamodb-data-marshaller';
 
 describe('attribute', () => {
     it(

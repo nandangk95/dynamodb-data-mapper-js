@@ -1,7 +1,7 @@
 import { Iterator } from './Iterator';
 import { ParallelScanOptions } from './namedParameters';
 import { ParallelScanPaginator } from './ParallelScanPaginator';
-import { ZeroArgumentsConstructor } from '@aws-ndk/dynamodb-data-marshaller';
+import { ZeroArgumentsConstructor } from '@ndkur/dynamodb-data-marshaller';
 import { DynamoDB } from "@aws-sdk/client-dynamodb";
 
 /**

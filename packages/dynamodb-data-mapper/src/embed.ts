@@ -2,7 +2,7 @@ import {DynamoDbSchema} from "./protocols";
 import {
     DocumentType,
     ZeroArgumentsConstructor,
-} from '@aws-ndk/dynamodb-data-marshaller';
+} from '@ndkur/dynamodb-data-marshaller';
 
 export interface DocumentTypeOptions<T> {
     defaultProvider?: () => T;
