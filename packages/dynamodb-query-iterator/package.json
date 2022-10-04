@@ -1,5 +1,5 @@
 {
-  "name": "@ndkur/dynamodb-query-iterator",
+  "name": "@nandangk95/dynamodb-query-iterator",
   "version": "0.7.9",
   "description": "Abstraction for DynamoDB queries and scans that handles pagination and parallel worker coordination",
   "keywords": [
@@ -40,5 +40,6 @@
   },
   "dependencies": {
     "tslib": "^1.9"
-  }
+  },
+  "gitHead": "56f1599b9a1cfc83af05faa01b805a0c95b03502"
 }
