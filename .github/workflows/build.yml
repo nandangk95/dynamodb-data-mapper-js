@@ -25,7 +25,7 @@ jobs:
           always-auth: true
           node-version: ${{ matrix.node-version }}
           registry-url: https://registry.npmjs.org
-          scope: '@ndkur'
+          scope: 'ndkur'
       - run: npm install -g npm@latest
       - run: npm install
         env:
@@ -33,6 +33,7 @@ jobs:
       - run: npm run bootstrap
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+      - run: npm run pretest
       - run: npm run build
       - run: npm run test
 
@@ -52,7 +53,7 @@ jobs:
           always-auth: true
           node-version: 14.x
           registry-url: https://registry.npmjs.org
-          scope: '@ndkur'
+          scope: 'ndkur'
       - run: npm install -g npm@latest
       - run: npm install
         env:
@@ -60,6 +61,7 @@ jobs:
       - run: npm run bootstrap
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+      - run: npm run pretest
       - run: npm run build
       - run: git config --global user.name 'nandangk95'
       - run: git config --global user.email 'nandang.k95@gmail.com'
