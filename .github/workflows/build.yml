@@ -66,9 +66,6 @@ jobs:
       - run: git config --global user.name 'nandangk95'
       - run: git config --global user.email 'nandang.k95@gmail.com'
       - run: npm run bump-patch
-      - run: npm whoami
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
       - run: npm run publish-ci
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
