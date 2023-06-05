@@ -104,18 +104,21 @@ export class DataMapper {
     private readonly readConsistency: ReadConsistency;
     private readonly skipVersionCheck: boolean;
     private readonly tableNamePrefix: string;
+    private readonly isDebuggingLog: boolean;
 
     constructor({
         client,
         readConsistency = 'eventual',
         skipVersionCheck = false,
-        tableNamePrefix = ''
+        tableNamePrefix = '',
+        isDebuggingLog = false
     }: DataMapperConfiguration) {
         client.config.customUserAgent = [[` dynamodb-data-mapper-js/${VERSION}`]];
         this.client = client;
         this.readConsistency = readConsistency;
         this.skipVersionCheck = skipVersionCheck;
         this.tableNamePrefix = tableNamePrefix;
+        this.isDebuggingLog = isDebuggingLog;
     }
 
     /**
@@ -451,6 +454,7 @@ export class DataMapper {
             condition,
             returnValues = 'ALL_OLD',
             skipVersionCheck = this.skipVersionCheck,
+            isDebuggingLog = this.isDebuggingLog,
         } = options;
 
         const schema = getSchema(item);
@@ -496,7 +500,14 @@ export class DataMapper {
             }
         }
 
+        if (isDebuggingLog) {
+            console.log(`START - Operation deleteItem table`, req.TableName)
+        }
         const {Attributes} = await this.client.deleteItem(req);
+        if (isDebuggingLog) {
+            console.log(`END - Operation deleteItem table`, req.TableName)
+        }
+
         if (Attributes) {
             return unmarshallItem<T>(
                 schema,
@@ -639,7 +650,8 @@ export class DataMapper {
         }
         const {
             projection,
-            readConsistency = this.readConsistency
+            readConsistency = this.readConsistency,
+            isDebuggingLog = this.isDebuggingLog,
         } = options;
 
         const schema = getSchema(item);
@@ -664,7 +676,14 @@ export class DataMapper {
             }
         }
 
+        if (isDebuggingLog) {
+            console.log(`START - Operation getItem table`, req.TableName)
+        }
         const {Item} = await this.client.getItem(req);
+        if (isDebuggingLog) {
+            console.log(`END - Operation getItem table`, req.TableName)
+        }
+
         if (Item) {
             return unmarshallItem<T>(
                 schema,
@@ -770,6 +789,7 @@ export class DataMapper {
         let {
             condition,
             skipVersionCheck = this.skipVersionCheck,
+            isDebuggingLog = this.isDebuggingLog,
         } = options;
 
         const schema = getSchema(item);
@@ -825,7 +845,13 @@ export class DataMapper {
             }
         }
 
+        if (isDebuggingLog) {
+            console.log(`START - Operation putItem table`, req.TableName)
+        }
         await this.client.putItem(req);
+        if (isDebuggingLog) {
+            console.log(`START - Operation putItem table`, req.TableName)
+        }
 
         return unmarshallItem<T>(
             schema,
@@ -879,7 +905,10 @@ export class DataMapper {
             valueConstructor = valueConstructorOrParameters as ZeroArgumentsConstructor<T>;
         }
 
-        return new QueryIterator(
+        if (options && options.isDebuggingLog) {
+            console.log(`START - Operation query table`, this.getTableName(valueConstructor.prototype))
+        }
+        let queryResult = new QueryIterator(
             this.client,
             valueConstructor,
             keyCondition,
@@ -889,6 +918,10 @@ export class DataMapper {
                 tableNamePrefix: this.tableNamePrefix,
             }
         );
+        if (options && options.isDebuggingLog) {
+            console.log(`END - Operation query table`, this.getTableName(valueConstructor.prototype))
+        }
+        return queryResult;
     }
 
     /**
@@ -934,7 +967,10 @@ export class DataMapper {
             valueConstructor = ctorOrParams as ZeroArgumentsConstructor<T>;
         }
 
-        return new ScanIterator(
+        if (options && options.isDebuggingLog) {
+            console.log(`START - Operation scan table`, this.getTableName(valueConstructor.prototype))
+        }
+        let scanResult = new ScanIterator(
             this.client,
             valueConstructor,
             {
@@ -943,6 +979,10 @@ export class DataMapper {
                 tableNamePrefix: this.tableNamePrefix,
             }
         );
+        if (options && options.isDebuggingLog) {
+            console.log(`END - Operation scan table`, this.getTableName(valueConstructor.prototype))
+        }
+        return scanResult;
     }
 
     /**
@@ -1126,7 +1166,14 @@ export class DataMapper {
             req.ExpressionAttributeValues = attributes.values;
         }
 
+        if (options && options.isDebuggingLog) {
+            console.log(`START - Operation update item table`, req.TableName);
+        }
         const rawResponse = await this.client.updateItem(req);
+        if (options && options.isDebuggingLog) {
+            console.log(`END - Operation update item table`, req.TableName);
+        }
+
         if (rawResponse.Attributes) {
             return unmarshallItem<T>(schema, rawResponse.Attributes, valueConstructor);
         }

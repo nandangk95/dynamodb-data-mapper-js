@@ -38,6 +38,9 @@
   "peerDependencies": {
     "@aws-sdk/client-dynamodb": "^3.178.0"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "dependencies": {
     "tslib": "^1.9"
   },

@@ -58,6 +58,11 @@ export interface QueryOptions extends ReadConsistencyConfiguration {
      * query operation on the same index should be supplied for this parameter.
      */
     startKey?: {[key: string]: any};
+
+    /**
+     * enable log for debugging.
+     */
+    isDebuggingLog?: boolean;
 }
 
 /**

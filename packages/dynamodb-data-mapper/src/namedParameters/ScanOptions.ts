@@ -32,6 +32,11 @@ export interface BaseScanOptions extends ReadConsistencyConfiguration {
      * The item attributes to get.
      */
     projection?: ProjectionExpression;
+
+    /**
+     * enable log for debugging.
+     */
+    isDebuggingLog?: boolean;
 }
 
 export interface CtorBearer<T extends StringToAnyObjectMap = StringToAnyObjectMap> {

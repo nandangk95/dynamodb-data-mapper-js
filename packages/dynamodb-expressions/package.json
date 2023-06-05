@@ -42,5 +42,8 @@
     "@nandangk95/dynamodb-auto-marshaller": "^0.7.11",
     "tslib": "^1.9"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "gitHead": "56f1599b9a1cfc83af05faa01b805a0c95b03502"
 }

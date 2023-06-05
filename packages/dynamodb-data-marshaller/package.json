@@ -41,6 +41,9 @@
     "tslib": "^1.9",
     "utf8-bytes": "^0.0.1"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "peerDependencies": {
     "@aws-sdk/client-dynamodb": "^3.178.0"
   },
