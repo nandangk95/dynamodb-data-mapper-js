@@ -905,7 +905,11 @@ export class DataMapper {
             valueConstructor = valueConstructorOrParameters as ZeroArgumentsConstructor<T>;
         }
 
-        if (options && options.isDebuggingLog) {
+        const {
+            isDebuggingLog = this.isDebuggingLog
+        } = options;
+
+        if (isDebuggingLog) {
             console.log(`START - Operation query table`, this.getTableName(valueConstructor.prototype))
         }
         let queryResult = new QueryIterator(
@@ -918,7 +922,7 @@ export class DataMapper {
                 tableNamePrefix: this.tableNamePrefix,
             }
         );
-        if (options && options.isDebuggingLog) {
+        if (isDebuggingLog) {
             console.log(`END - Operation query table`, this.getTableName(valueConstructor.prototype))
         }
         return queryResult;
@@ -967,7 +971,13 @@ export class DataMapper {
             valueConstructor = ctorOrParams as ZeroArgumentsConstructor<T>;
         }
 
-        if (options && options.isDebuggingLog) {
+        
+        const {
+            isDebuggingLog = this.isDebuggingLog
+        } = options;
+
+
+        if (isDebuggingLog) {
             console.log(`START - Operation scan table`, this.getTableName(valueConstructor.prototype))
         }
         let scanResult = new ScanIterator(
@@ -979,7 +989,7 @@ export class DataMapper {
                 tableNamePrefix: this.tableNamePrefix,
             }
         );
-        if (options && options.isDebuggingLog) {
+        if (isDebuggingLog) {
             console.log(`END - Operation scan table`, this.getTableName(valueConstructor.prototype))
         }
         return scanResult;
@@ -1142,6 +1152,10 @@ export class DataMapper {
             Key: marshallKey(schema, key),
         };
 
+        const {
+            isDebuggingLog = this.isDebuggingLog
+        } = options;
+
         const attributes = new ExpressionAttributes();
 
         if (options.condition) {
@@ -1166,11 +1180,11 @@ export class DataMapper {
             req.ExpressionAttributeValues = attributes.values;
         }
 
-        if (options && options.isDebuggingLog) {
+        if (isDebuggingLog) {
             console.log(`START - Operation update item table`, req.TableName);
         }
         const rawResponse = await this.client.updateItem(req);
-        if (options && options.isDebuggingLog) {
+        if (isDebuggingLog) {
             console.log(`END - Operation update item table`, req.TableName);
         }
 
