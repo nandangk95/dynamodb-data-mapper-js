@@ -14,6 +14,11 @@ export interface PutOptions {
      * from taking effect if the local version is out of date.
      */
     skipVersionCheck?: boolean;
+
+    /**
+     * enable log for debugging.
+     */
+    isDebuggingLog?: boolean;
 }
 
 /**

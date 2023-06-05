@@ -24,4 +24,9 @@ export interface DataMapperConfiguration {
      * A prefix to apply to all table names.
      */
     tableNamePrefix?: string;
+
+    /**
+     * enable log for debugging.
+     */
+    isDebuggingLog?: boolean;
 }

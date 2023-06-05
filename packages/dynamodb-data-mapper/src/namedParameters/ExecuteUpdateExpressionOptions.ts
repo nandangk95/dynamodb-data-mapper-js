@@ -6,4 +6,9 @@ export interface ExecuteUpdateExpressionOptions {
      * predicated.
      */
     condition?: ConditionExpression;
+
+    /**
+     * enable log for debugging.
+     */
+    isDebuggingLog?: boolean;
 }

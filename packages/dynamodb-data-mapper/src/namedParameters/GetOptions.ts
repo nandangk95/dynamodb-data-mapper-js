@@ -7,6 +7,11 @@ export interface GetOptions extends ReadConsistencyConfiguration {
      * The item attributes to get.
      */
     projection?: ProjectionExpression;
+
+    /**
+     * enable log for debugging.
+     */
+    isDebuggingLog?: boolean;
 }
 
 /**
